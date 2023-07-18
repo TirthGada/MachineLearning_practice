@@ -7,4 +7,4 @@
 
 **3)Iris dataset**:- Trained dataset with **Scikit** using **KNeighbors Classification** which takes features of flowers such as **sepal_width, sepal length,petal length,petal width** and predicts whethers the folwer belongs to **Iris-Setosa, Iris-Virginica** etc..
 
-**4)Housing price dataset**:- Used various regressor like **RandomForest , Multi-Linear ,DecisionTree** and   **KNeighbors Classification** using **Scikit**  etc.. Plotted various histograms depicting correlation with price of house with various parameters like carpet-area, guestroom , locality , bedrooms, bathroo etc.. using **Pyplot**
+**4)Housing price dataset**:- Used various regressor like **RandomForest , Multi-Linear ,DecisionTree** and   **KNeighbors Classification** using **Scikit**  etc.. Plotted various histograms depicting correlation with price of house with various parameters like carpet-area, guestroom , locality , bedrooms, bathroo etc.. using **Pyplot** . Source of dataset was **Kaggle**
