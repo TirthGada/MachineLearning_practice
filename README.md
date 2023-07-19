@@ -144,3 +144,21 @@ The computation cost is high because of calculating the distance between the dat
 In the previous topic, we have learned about Simple Linear Regression, where a single Independent/Predictor(X) variable is used to model the response variable (Y). But there may be various cases in which the response variable is affected by more than one predictor variable; for such cases, the Multiple Linear Regression algorithm is used.
 
 ********
+## Polynomial Regression
+
+It is also called the special case of Multiple Linear Regression in ML. Because we add some polynomial terms to the Multiple Linear regression equation to convert it into Polynomial Regression.
+
+It is a linear model with some modification in order to increase the accuracy.
+
+The dataset used in Polynomial regression for training is of non-linear nature.
+
+It makes use of a linear regression model to fit the complicated and non-linear functions and datasets.
+Hence, "In Polynomial regression, the original features are converted into Polynomial features of required degree (2,3,..,n) and then modeled using a linear model.
+
+**y= b0+b1x1+ b2x12+ b2x13+...... bnx1n**
+
+Simple Linear Regression equation:         y = b0+b1x         
+
+Multiple Linear Regression equation:         y= b0+b1x+ b2x2+ b3x3+....+ bnxn        
+
+Polynomial Regression equation:         y= b0+b1x + b2x2+ b3x3+....+ bnxn         
