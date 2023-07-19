@@ -155,10 +155,10 @@ The dataset used in Polynomial regression for training is of non-linear nature.
 It makes use of a linear regression model to fit the complicated and non-linear functions and datasets.
 Hence, "In Polynomial regression, the original features are converted into Polynomial features of required degree (2,3,..,n) and then modeled using a linear model.
 
-**y= b0+b1x1+ b2x12+ b2x13+...... bnx1n**
+**y= b0+b1x1+ b2x1^2+ b2x1^3+...... bnx1^n**
 
 Simple Linear Regression equation:         y = b0+b1x         
 
 Multiple Linear Regression equation:         y= b0+b1x+ b2x2+ b3x3+....+ bnxn        
 
-Polynomial Regression equation:         y= b0+b1x + b2x2+ b3x3+....+ bnxn         
+Polynomial Regression equation:         y= b0+b1x + b2x^2+ b3x^3+....+ bnx^n         
