@@ -215,3 +215,8 @@ SVM optimizes the margin, which is the distance between the decision boundary an
 **Logistic Regression:**
 
 Logistic Regression directly models the probabilities of class membership. It does not explicitly focus on maximizing the margin but seeks to fit the probabilities to the true labels.
+
+********
+## Decision Tree VS Random Forest
+**Decision Tree:** A decision tree is a simple tree-like structure that makes decisions based on a series of feature tests. It recursively splits the data into subsets based on the values of the input features until it reaches the leaves (terminal nodes) that represent the final decision or prediction.
+**Random Forest:** Random Forest is an ensemble learning method that builds multiple decision trees and combines their predictions. 
