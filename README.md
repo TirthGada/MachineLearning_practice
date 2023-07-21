@@ -173,21 +173,45 @@ The dataset used in Polynomial regression for training is of non-linear nature.
 It makes use of a linear regression model to fit the complicated and non-linear functions and datasets.
 Hence, "In Polynomial regression, the original features are converted into Polynomial features of required degree (2,3,..,n) and then modeled using a linear model.
 
-**y= b0+b1x1+ b2x1^2+ b2x1^3+...... bnx1^n**
-
 Simple Linear Regression equation:         y = b0+b1x         
 
 Multiple Linear Regression equation:         y= b0+b1x+ b2x2+ b3x3+....+ bnxn        
 
 Polynomial Regression equation:         y= b0+b1x + b2x^2+ b3x^3+....+ bnx^n         
-
+******
+## Logistic Regression
+**Despite its name, logistic regression is actually a classification algorithm, not a regression algorithm.**
 *********
 ## SVM vs Logistic Regression
-**SVM:** SVM aims to find the hyperplane that best separates the data into different classes while maximizing the margin between the classes. The hyperplane is the line or surface that separates the data points of one class from another. SVM tries to find the optimal hyperplane that has the maximum margin to ensure better generalization to new data.
-**Logistic Regression:** Logistic Regression models the probability of the binary outcome using a logistic function (sigmoid function). It finds the best-fit line that separates the data points of two classes based on their probabilities. The decision boundary is not a straight line in case of multi-dimensional data.
+
+**SVM:**
+
+SVM aims to find the hyperplane that best separates the data into different classes while maximizing the margin between the classes. The hyperplane is the line or surface that separates the data points of one class from another. SVM tries to find the optimal hyperplane that has the maximum margin to ensure better generalization to new data.
+
+**Logistic Regression:**
+
+Logistic Regression models the probability of the binary outcome using a logistic function (sigmoid function). It finds the best-fit line that separates the data points of two classes based on their probabilities. The decision boundary is not a straight line in case of multi-dimensional data.
+
+Logistic regression is used for binary classification tasks, where the goal is to predict a binary outcome, usually represented as either 0 or 1, True or False, Yes or No, etc. The algorithm models the probability of the binary outcome based on a set of input features. It uses the logistic (sigmoid) function to map the predicted probabilities to the range [0, 1], making it suitable for binary classification problems.
+
+
+During the training process, the logistic regression model learns the values of the coefficients  by minimizing the error between the predicted probabilities and the actual class labels in the training data. 
+
+
 **Algorithm type:**
-**SVM:** SVM is a discriminative algorithm, meaning it focuses on finding the boundary between classes.
-**Logistic Regression:** Logistic Regression is a probabilistic algorithm, as it models the probability of an instance belonging to a certain class.
+
+**SVM:**
+
+SVM is a discriminative algorithm, meaning it focuses on finding the boundary between classes.
+**Logistic Regression:**
+
+Logistic Regression is a probabilistic algorithm, as it models the probability of an instance belonging to a certain class.
+
 **Margin vs. Probabilities:**
-**SVM:** SVM optimizes the margin, which is the distance between the decision boundary and the closest data points from both classes (support vectors). It focuses on the points that are most informative for classification.
-**Logistic Regression:** Logistic Regression directly models the probabilities of class membership. It does not explicitly focus on maximizing the margin but seeks to fit the probabilities to the true labels.
+
+**SVM:** 
+
+SVM optimizes the margin, which is the distance between the decision boundary and the closest data points from both classes (support vectors). It focuses on the points that are most informative for classification.
+**Logistic Regression:**
+
+Logistic Regression directly models the probabilities of class membership. It does not explicitly focus on maximizing the margin but seeks to fit the probabilities to the true labels.
