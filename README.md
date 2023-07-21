@@ -180,3 +180,14 @@ Simple Linear Regression equation:         y = b0+b1x
 Multiple Linear Regression equation:         y= b0+b1x+ b2x2+ b3x3+....+ bnxn        
 
 Polynomial Regression equation:         y= b0+b1x + b2x^2+ b3x^3+....+ bnx^n         
+
+*********
+## SVM vs Logistic Regression
+**SVM:** SVM aims to find the hyperplane that best separates the data into different classes while maximizing the margin between the classes. The hyperplane is the line or surface that separates the data points of one class from another. SVM tries to find the optimal hyperplane that has the maximum margin to ensure better generalization to new data.
+**Logistic Regression:** Logistic Regression models the probability of the binary outcome using a logistic function (sigmoid function). It finds the best-fit line that separates the data points of two classes based on their probabilities. The decision boundary is not a straight line in case of multi-dimensional data.
+**Algorithm type:**
+**SVM:** SVM is a discriminative algorithm, meaning it focuses on finding the boundary between classes.
+**Logistic Regression:** Logistic Regression is a probabilistic algorithm, as it models the probability of an instance belonging to a certain class.
+**Margin vs. Probabilities:**
+**SVM:** SVM optimizes the margin, which is the distance between the decision boundary and the closest data points from both classes (support vectors). It focuses on the points that are most informative for classification.
+**Logistic Regression:** Logistic Regression directly models the probabilities of class membership. It does not explicitly focus on maximizing the margin but seeks to fit the probabilities to the true labels.
