@@ -12,7 +12,7 @@
 **5)ICICI BANK Stock prediction**:- Predicted stock prices using **multiple linear regression**
 
 *******
-## Support Vector Machine 
+# Support Vector Machine 
 **1)INTRODUCTION**
 
 Support Vector Machine or SVM is one of the most popular Supervised Learning algorithms, which is used for Classification as well as Regression problems. However, primarily, it is used for Classification problems in Machine Learning.The goal of the SVM algorithm is to create the best line or decision boundary that can segregate n-dimensional space into classes so that we can easily put the new data point in the correct category in the future. This best decision boundary is called a hyperplane.
@@ -31,7 +31,7 @@ Hence, the SVM algorithm helps to find the best line or decision boundary; this 
 
 
 *******
-## Decision Tree Classifier
+# Decision Tree Classifier
 **1)INTRODUCTION**: Decision Tree is a Supervised learning technique that can be used for both classification and Regression problems, but mostly it is preferred for solving Classification problems. It is a tree-structured classifier, where internal nodes represent the features of a dataset, branches represent the decision rules and each leaf node represents the outcome.
 
 In a Decision tree, there are two nodes, which are the Decision Node and Leaf Node. Decision nodes are used to make any decision and have multiple branches, whereas Leaf nodes are the output of those decisions and do not contain any further branches.
@@ -72,7 +72,7 @@ Step-5: Recursively make new decision trees using the subsets of the dataset cre
 
 ********
 
-## RANDOM FOREST ALGORITHM
+# RANDOM FOREST ALGORITHM
 
 **from sklearn.ensemble import RandomForestClassifier** 
 
@@ -113,7 +113,7 @@ Land Use: We can identify the areas of similar land use by this algorithm.
 Marketing: Marketing trends can be identified using this algorithm.
 
 ******
-## K-Nearest Neighbor(KNN) Algorithm
+# K-Nearest Neighbor(KNN) Algorithm
 **1)INTRODUCTION:**
 K-Nearest Neighbour is one of the simplest Machine Learning algorithms based on Supervised Learning technique.
 
@@ -157,12 +157,12 @@ Always needs to determine the value of K which may be complex some time.
 The computation cost is high because of calculating the distance between the data points for all the training samples.
 
 ********
-## Multiple Linear Regression
+# Multiple Linear Regression
 
 In the previous topic, we have learned about Simple Linear Regression, where a single Independent/Predictor(X) variable is used to model the response variable (Y). But there may be various cases in which the response variable is affected by more than one predictor variable; for such cases, the Multiple Linear Regression algorithm is used.
 
 ********
-## Polynomial Regression
+# Polynomial Regression
 
 It is also called the special case of Multiple Linear Regression in ML. Because we add some polynomial terms to the Multiple Linear regression equation to convert it into Polynomial Regression.
 
@@ -179,10 +179,10 @@ Multiple Linear Regression equation:         y= b0+b1x+ b2x2+ b3x3+....+ bnxn
 
 Polynomial Regression equation:         y= b0+b1x + b2x^2+ b3x^3+....+ bnx^n         
 ******
-## Logistic Regression
+# Logistic Regression
 **Despite its name, logistic regression is actually a classification algorithm, not a regression algorithm.**
 *********
-## SVM vs Logistic Regression
+# SVM vs Logistic Regression
 
 **SVM:**
 
@@ -220,3 +220,185 @@ Logistic Regression directly models the probabilities of class membership. It do
 ## Decision Tree VS Random Forest
 **Decision Tree:** A decision tree is a simple tree-like structure that makes decisions based on a series of feature tests. It recursively splits the data into subsets based on the values of the input features until it reaches the leaves (terminal nodes) that represent the final decision or prediction.
 **Random Forest:** Random Forest is an ensemble learning method that builds multiple decision trees and combines their predictions. 
+********
+
+## Regularization techniques
+The key difference is in how they assign penalties to the coefficients:
+
+Here are some considerations for both high and low regularization:
+
+**High Regularization (Strong Penalty):**
+
+Advantages:
+Helps prevent overfitting: High regularization can be beneficial when you have a small dataset or when the features are highly correlated, as it reduces the risk of fitting noise in the data.
+Simplifies the model: High regularization can lead to smaller coefficient values and a simpler model, which might be easier to interpret and generalize.
+Feature selection: L1 regularization (Lasso) within Elastic Net can drive some coefficients to exactly zero, performing automatic feature selection.
+Disadvantages:
+Potential underfitting: Too much regularization can lead to underfitting, where the model is too simple to capture the underlying patterns in the data.
+Loss of important information: Excessive regularization can lead to important features being penalized too heavily, potentially leading to a less accurate model.
+
+**Low Regularization (Weak Penalty):**
+
+Advantages:
+Higher flexibility: Low regularization allows the model to fit the data more closely, potentially capturing complex relationships and patterns.
+Better fit for large datasets: With a larger amount of data, the risk of overfitting might be reduced, making lower regularization more suitable.
+
+**Key points**
+Let us consider that we have a very accurate model, this model has a low error in predictions and it’s not from the target (which is represented by bull’s eye). This model has **low bias** and **low variance**. Now, if the predictions are scattered here and there then that is the symbol of **high variance**, also if the predictions are far from the target then that is the symbol of **high bias**.
+Sometimes we need to choose between low variance and low bias. There is an approach that prefers some bias over high variance, this approach is called Regularization. It works well for most of the classification/regression problems.
+
+**Ridge Regression:**
+Performs L2 regularization, i.e., adds penalty equivalent to the square of the magnitude of coefficients
+Minimization objective = LS Obj + α * (sum of square of coefficients)
+
+**Lasso Regression:**
+Performs L1 regularization, i.e., adds penalty equivalent to the absolute value of the magnitude of coefficients
+Minimization objective = LS Obj + α * (sum of the absolute value of coefficients)
+
+Here, LS Obj refers to the ‘least squares objective,’ i.e., the linear regression objective without regularization.
+
+*******
+# Lasso Regression
+
+The full form of LASSO is the **least absolute shrinkage and selection operator**. As the name suggests, LASSO uses the “shrinkage” technique in which coefficients are determined, which get shrunk towards the central point as the mean.  
+
+The LASSO regression in regularization is based on simple models that posses fewer parameters. We get a better interpretation of the models due to the shrinkage process. The shrinkage process also enables the identification of variables strongly associated with variables corresponding to the target. 
+
+Lasso regression is also called **Penalized regression method**. This method is usually used in machine learning for the selection of the subset of variables. It provides greater prediction accuracy as compared to other regression models. Lasso Regularization helps to increase model interpretation. 
+
+The less important features of a dataset are penalized by the lasso regression. The coefficients of this dataset are made zero leading to their elimination. The dataset with high dimensions and correlation is well suited for lasso regression. 
+
+**Lasso Regression Formula:**
+
+D= Residual Sum of Squares or Least Squares Lambda * Aggregate of  absolute values of coefficients   
+
+**Process**
+Here’s a step-by-step explanation of how LASSO regression works:
+
+Linear regression model: LASSO regression starts with the standard linear regression model, which assumes a linear relationship between the independent variables (features) and the dependent variable (target). The linear regression equation can be represented as follows:y = β₀ + β₁x₁ + β₂x₂ + ... + βₚxₚ + ε Where y is the dependent variable (target). β₀, β₁, β₂, ..., βₚ are the coefficients (parameters) to be estimated.x₁, x₂, ..., xₚ are the independent variables (features).ε represents the error term.
+
+L1 regularization: LASSO regression introduces an additional penalty term based on the absolute values of the coefficients. The L1 regularization term is the sum of the absolute values of the coefficients multiplied by a tuning parameter λ: L₁ = λ * (|β₁| + |β₂| + ... + |βₚ|) Where:λ is the regularization parameter that controls the amount of regularization applied.β₁, β₂, ..., βₚ are the coefficients.
+
+Objective function: The objective of LASSO regression is to find the values of the coefficients that minimize the sum of the squared differences between the predicted values and the actual values, while also minimizing the L1 regularization term:Minimize: RSS + L₁ Where:RSS is the residual sum of squares, which measures the error between the predicted values and the actual values.
+
+Shrinking coefficients: By adding the L1 regularization term, LASSO regression can shrink the coefficients towards zero. When λ is sufficiently large, some coefficients are driven to exactly zero. This property of LASSO makes it useful for feature selection, as the variables with zero coefficients are effectively removed from the model.
+
+Tuning parameter λ: The choice of the regularization parameter λ is crucial in LASSO regression. A larger λ value increases the amount of regularization, leading to more coefficients being pushed towards zero. Conversely, a smaller λ value reduces the regularization effect, allowing more variables to have non-zero coefficients.
+
+Model fitting: To estimate the coefficients in LASSO regression, an optimization algorithm is used to minimize the objective function. Coordinate Descent is commonly employed, which iteratively updates each coefficient while holding the others fixed.
+
+Helps to reduce overfitting by shrinking and selecting features with less importance.
+
+**Video** 
+https://www.youtube.com/watch?v=K8iKkzUDw5I
+
+**Code**
+
+from sklearn.linear_model import Lasso
+#Initializing the Lasso Regressor with Normalization Factor as True
+lasso_reg = Lasso(normalize=True)
+#Fitting the Training data to the Lasso regressor
+lasso_reg.fit(X_train,Y_train)
+#Predicting for X_test
+y_pred_lass =lasso_reg.predict(X_test)
+#Printing the Score with RMLSE
+print("\n\nLasso SCORE : ", score(y_pred_lass, actual_cost))
+
+**Example**
+
+Let's assume we set λ = 0.5 for this example.
+
+The Lasso regression aims to minimize the following cost function:
+Lasso Cost = Least Squares Cost + 0.5 * (|β1| + |β2|)
+
+Where β1 and β2 are the coefficients of the features X1 and X2, respectively.
+
+Step 3: Model Training
+Using the Lasso cost function, the model will find the coefficients (β1 and β2) that minimize the cost while considering the regularization term. The coefficients will be adjusted based on the data and the value of λ.
+
+Step 4: Prediction
+Once the model is trained, you can use it to make predictions. Given a new set of feature values (X1_new, X2_new), you calculate the predicted Y value as follows:
+
+Predicted Y = β1 * X1_new + β2 * X2_new
+
+However, in Lasso regression, due to the regularization term, some coefficients may become zero. This means that certain features might not contribute to the prediction at all.
+
+In this example, if the Lasso regression determines that X2 is less important, it might set the coefficient β2 to zero. As a result, the prediction would only depend on the X1 feature:
+
+Predicted Y = β1 * X1_new
+
+This process results in a sparse model that can help in feature selection and model simplification.
+
+********
+
+# Ridge Regression
+
+In Ridge regression, we add a penalty term which is equal to the square of the coefficient. The L2 term is equal to the square of the magnitude of the coefficients. We also add a coefficient  lambda  to control that penalty term. In this case if  \lambda  is zero then the equation is the basic OLS else
+
+In ridge regression only difference is sum of absolute values are replaced with sum of squares.
+
+**Video** https://www.youtube.com/watch?v=Yj7sIK0VMg0
+
+*******
+
+# Lasso vs Ridge 
+
+**On applying
+**Coefficient Shrinkage:**
+Lasso: Lasso tends to shrink some coefficients all the way to zero, effectively performing automatic feature selection. It can be useful when you suspect that only a subset of the features are important for prediction.
+Ridge: Ridge shrinks the coefficients towards zero but does not usually force them to become exactly zero. It can be effective when all features are potentially relevant and should be retained in the model.
+
+
+**from sklearn.linear_model import Lasso, Ridge**
+
+## Lasso Regression
+lasso = Lasso(alpha=0.1)  # alpha is the regularization parameter
+lasso.fit(X_train, y_train)
+lasso_coeffs = lasso.coef_
+
+## Ridge Regression
+ridge = Ridge(alpha=1.0)  # alpha is the regularization parameter
+ridge.fit(X_train, y_train)
+ridge_coeffs = ridge.coef_
+******
+# General understanding
+The penalty term is not added to the predicted outcome y itself in Lasso regression. The penalty term is only added to the optimization objective during the training process to influence the values of the coefficients (β) that are used to make predictions.
+
+The primary goal of Lasso regression is to find the values of the coefficients that minimize the sum of squared residuals (||y - Xβ||^2) while also considering the L1 penalty term (λ||β||_1). The penalty term encourages some coefficients to become exactly zero, effectively performing feature selection and helping to prevent overfitting.
+
+
+********
+# Elastic Net regression
+
+Elastic Net regression is a hybrid regularization technique that combines both Lasso (L1 regularization) and Ridge (L2 regularization) regression. It aims to address some of the limitations of Lasso and Ridge by providing a balance between feature selection and coefficient shrinkage. Elastic Net introduces two hyperparameters, α (alpha) and λ (lambda), that control the mix of L1 and L2 regularization.
+
+The cost function of Elastic Net is a combination of L1 and L2 regularization terms along with the least squares cost:
+
+**Elastic Net Cost = Least Squares Cost + α * λ * Σ|βi| + (1 - α) * λ * Σ(βi)^2**
+
+Where:
+
+Least Squares Cost: The traditional linear regression cost (sum of squared residuals).
+α (alpha): A mixing parameter that determines the balance between L1 and L2 regularization. When α = 1, Elastic Net is equivalent to Lasso; when α = 0, it is equivalent to Ridge.
+λ (lambda): The regularization parameter that controls the overall strength of regularization.
+
+
+**Create an Elastic Net regression model**
+
+alpha = 0.5  # Regularization strength
+l1_ratio = 0.5  # L1/L2 ratio (0.5 means equal L1 and L2 regularization)
+elastic_net = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+elastic_net.fit(X_train, y_train)
+
+**Guidelines**
+
+If you set α (alpha) to 0.2 and λ (lambda) to 0.6 in the context of Elastic Net regularization, you would be specifying the following:
+
+α = 0.2: This indicates that you want a mixture of both L1 and L2 regularization in your Elastic Net model, with a greater emphasis on L2 (Ridge) regularization. An α value of 0.2 means that 20% of the regularization is from L1 (Lasso) and 80% is from L2 (Ridge).
+λ = 0.6: This represents the regularization strength or the penalty applied to the coefficients of the model. A higher value of λ leads to stronger regularization, which can shrink the coefficients and prevent overfitting. In this case, λ is set to 0.6, meaning that the regularization penalty is moderate.
+By choosing α = 0.2 and λ = 0.6, you are prioritizing L2 regularization (Ridge) over L1 regularization (Lasso) and applying a moderate level of regularization penalty.
+
+λ (lambda) = 8:
+A higher value of λ indicates stronger regularization.
+With λ = 8, the regularization effect on the coefficients will be significant, leading to potentially smaller coefficient values.
+Larger λ values will push the coefficients towards zero more aggressively, resulting in a simpler model with fewer significant features.
