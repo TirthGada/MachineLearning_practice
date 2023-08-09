@@ -402,3 +402,13 @@ By choosing α = 0.2 and λ = 0.6, you are prioritizing L2 regularization (Ridge
 A higher value of λ indicates stronger regularization.
 With λ = 8, the regularization effect on the coefficients will be significant, leading to potentially smaller coefficient values.
 Larger λ values will push the coefficients towards zero more aggressively, resulting in a simpler model with fewer significant features.
+
+********
+# MOST IMPORTANT 
+
+However, the magnitude of the coefficient alone doesn't necessarily determine the importance of a feature. Feature importance can also be affected by factors like the scale of the feature, its units, the distribution of the data, and potential interactions between features.
+
+https://www.analyticsvidhya.com/blog/2020/11/lasso-regression-causes-sparsity-while-ridge-regression-doesnt-unfolding-the-math/
+
+<img width="1440" alt="Screenshot 2023-08-10 at 12 43 56 AM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/6d04238d-2c3e-48c1-bfd0-9d4720ba7b4e">
+<img width="1440" src="https://sparkbyexamples.com/wp-content/uploads/2023/03/Screenshot-2023-03-14-at-8.44.49-AM.png">
