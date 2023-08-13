@@ -294,15 +294,15 @@ https://www.youtube.com/watch?v=K8iKkzUDw5I
 
 **Code**
 
-from sklearn.linear_model import Lasso
-#Initializing the Lasso Regressor with Normalization Factor as True
-lasso_reg = Lasso(normalize=True)
-#Fitting the Training data to the Lasso regressor
-lasso_reg.fit(X_train,Y_train)
-#Predicting for X_test
-y_pred_lass =lasso_reg.predict(X_test)
-#Printing the Score with RMLSE
-print("\n\nLasso SCORE : ", score(y_pred_lass, actual_cost))
+    from sklearn.linear_model import Lasso
+    #Initializing the Lasso Regressor with Normalization Factor as True
+    lasso_reg = Lasso(normalize=True)
+    #Fitting the Training data to the Lasso regressor
+    lasso_reg.fit(X_train,Y_train)
+    #Predicting for X_test
+    y_pred_lass =lasso_reg.predict(X_test)
+    #Printing the Score with RMLSE
+    print("\n\nLasso SCORE : ", score(y_pred_lass, actual_cost))
 
 **Example**
 
@@ -441,5 +441,37 @@ Because AUC is a metric that utilizes probabilities of the class predictions, we
 
 ***********
 
+# Cross Validation Score
+
+Types :-
+
+### K-Fold
+
+The training data used in the model is split, into k number of smaller sets, to be used to validate the model. The model is then trained on k-1 folds of training set. The remaining fold is then used as a validation set to evaluate the model.
 
 
+    from sklearn.model_selection import KFold, cross_val_score
+    k_folds = KFold(n_splits = 5)
+    scores = cross_val_score(clf, X, y, cv = k_folds)
+
+### Stratified K-Fold
+
+In cases where classes are imbalanced we need a way to account for the imbalance in both the train and validation sets. To do so we can stratify the target classes, meaning that both sets will have an equal proportion of all classes.
+    
+    sk_folds = StratifiedKFold(n_splits = 5)
+    scores = cross_val_score(clf, X, y, cv = sk_folds)
+
+### Leave-One-Out (LOO)
+
+Instead of selecting the number of splits in the training data set like k-fold LeaveOneOut, utilize 1 observation to validate and n-1 observations to train. This method is an exaustive technique.
+
+     loo = LeaveOneOut()
+     scores = cross_val_score(clf, X, y, cv = loo)
+
+### Leave-P-Out (LPO)
+Leave-P-Out is simply a nuanced diffence to the Leave-One-Out idea, in that we can select the number of p to use in our validation set.
+
+     lpo = LeavePOut(p=2)
+     scores = cross_val_score(clf, X, y, cv = lpo)
+
+*********
