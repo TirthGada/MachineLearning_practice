@@ -412,3 +412,34 @@ https://www.analyticsvidhya.com/blog/2020/11/lasso-regression-causes-sparsity-wh
 
 <img width="1440" alt="Screenshot 2023-08-10 at 12 43 56 AM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/6d04238d-2c3e-48c1-bfd0-9d4720ba7b4e">
 <img width="1440" src="https://sparkbyexamples.com/wp-content/uploads/2023/03/Screenshot-2023-03-14-at-8.44.49-AM.png">
+
+
+**********
+
+# ROC-AUC CURVE
+
+In classification, there are many different evaluation metrics. The most popular is accuracy, which measures how often the model is correct. This is a great metric because it is easy to understand and getting the most correct guesses is often desired. There are some cases where you might consider using another evaluation metric.
+
+Another common metric is **AUC, area under the receiver operating characteristic (ROC) curve. The Reciever operating characteristic curve plots the true positive (TP) rate versus the false positive (FP) rate at different classification thresholds**.**The thresholds are different probability cutoffs that separate the two classes in binary classification**. It uses probability to tell us how well a model separates the classes.
+
+### Syntax
+
+
+    fpr, tpr, thresholds = roc_curve(true_y, y_prob)
+    plt.plot(fpr, tpr)
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+
+    print(f'model 1 AUC score: {roc_auc_score(y, y_proba)}')
+
+###  Import points on ROC-AUC
+
+An AUC score of around .5 would mean that the model is unable to make a distinction between the two classes and the curve would look like a line with a slope of 1. An AUC score closer to 1 means that the model has the ability to separate the two classes and the curve would come closer to the top left corner of the graph.
+
+
+Because AUC is a metric that utilizes probabilities of the class predictions, we can be more confident in a model that has a higher AUC score than one with a lower score even if they have similar accuracies.
+
+***********
+
+
+
