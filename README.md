@@ -1,4 +1,3 @@
-# PYTHON TIPS & NOTES
 
 ********
 There are four collection data types in the Python programming language:
@@ -155,6 +154,7 @@ If you want to multiply the content of a tuple a given number of times, you can 
     set3 = set1.union(set2)
 #### 6. INTERSECTION
 
+
     x = {"apple", "banana", "cherry"}
     y = {"google", "microsoft", "apple"}
     x.intersection_update(y)
@@ -164,4 +164,8 @@ If you want to multiply the content of a tuple a given number of times, you can 
     x = {"apple", "banana", "cherry"}
     y = {"google", "microsoft", "apple"}
     z = x.symmetric_difference(y)
+
+<img width="1440" alt="Screenshot 2023-08-15 at 9 46 43 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/a9171c48-264b-4082-b17f-5e6b10628ad7">
+<img width="1440" alt="Screenshot 2023-08-15 at 11 24 13 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/90181693-5b3b-425e-973e-b8f6d28580b1">
+<img width="1440" alt="Screenshot 2023-08-15 at 9 44 26 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/59bd40ab-543d-4cdb-9084-01356527f882">
 
