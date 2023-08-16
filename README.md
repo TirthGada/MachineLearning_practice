@@ -1,3 +1,15 @@
+********
+# Lambda Function
+
+     x = lambda a : a + 10
+     print(x(5))
+
+     x = lambda a, b : a * b
+     print(x(5, 6))
+
+     def myfunc(n):
+     return lambda a : a * n
+     mydoubler = myfunc(2)
 
 ********
 There are four collection data types in the Python programming language:
