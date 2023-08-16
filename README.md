@@ -168,4 +168,5 @@ If you want to multiply the content of a tuple a given number of times, you can 
 <img width="1440" alt="Screenshot 2023-08-15 at 9 46 43 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/a9171c48-264b-4082-b17f-5e6b10628ad7">
 <img width="1440" alt="Screenshot 2023-08-15 at 11 24 13 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/90181693-5b3b-425e-973e-b8f6d28580b1">
 <img width="1440" alt="Screenshot 2023-08-15 at 9 44 26 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/59bd40ab-543d-4cdb-9084-01356527f882">
+<img width="1440" alt="Screenshot 2023-08-07 at 1 15 16 AM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/38c6c2f0-42f7-45c8-a410-50e9e74682f6">
 
