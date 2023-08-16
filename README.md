@@ -483,8 +483,9 @@ Leave-P-Out is simply a nuanced diffence to the Leave-One-Out idea, in that we c
 
 It uses technique of SRSWR (Simple random sampling with replacement . Very useful in case of small input dataset . In this even the same data point can be repeated in sample multiple times.
 
-### Lazy vs Eager learner
+# Lazy vs Eager learner
 
 **Eager learner** :- Model mainly completes its process in training phase itself
+
 **Lazy learner** :- Model doesnt have training time , it does the work of predicting the output only when its told to predict rather than being trained earlier ( i.e it shows **laziness**)
 
