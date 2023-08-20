@@ -12,6 +12,11 @@
 **5)ICICI BANK Stock prediction**:- Predicted stock prices using **multiple linear regression**
 
 *******
+
+
+*******
+# SUPERVISED LEARNING
+*******
 ### Residual 
 Residual is the distance between predicted point (on the regression line) & actual point as depicted
 ******
