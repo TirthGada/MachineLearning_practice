@@ -1,3 +1,34 @@
+******* 
+# GENERAL 
+
+
+##### Differentiate data points based on the "day" categorical variable using the "hue" parameter
+sns.scatterplot(data=tips, x="total_bill", y="tip", hue="day")
+
+********
+ # DATA PREPROCESSING
+
+ ### Scaling the data to bring all the attributes to a comparable level
+     scaler = StandardScaler()
+     X_scaled = scaler.fit_transform(X)
+  
+### Normalizing the data so that the data approximately follows a Gaussian distribution
+     X_normalized = normalize(X_scaled)
+  
+### Converting the numpy array into a pandas DataFrame
+     X_normalized = pd.DataFrame(X_normalized)
+
+### Reducing the dimensionality of the data to make it visualizable
+     pca = PCA(n_components = 2)
+     X_principal = pca.fit_transform(X_normalized)
+     X_principal = pd.DataFrame(X_principal)
+     X_principal.columns = ['P1', 'P2']
+     print(X_principal.head())
+### Training using DB Scan
+
+     db_default = DBSCAN(eps = 0.0375, min_samples = 3).fit(X_principal)
+     labels = db_default.labels_
+
 ********
 # UNSUPERVISED LEARNING
 *********
@@ -189,3 +220,50 @@ The DBSCAN algorithm is based on this intuitive notion of “clusters” and “
 
 ### Why DBSCAN? 
 Partitioning methods (K-means, PAM clustering) and hierarchical clustering work for finding spherical-shaped clusters or convex clusters. In other words, they are suitable only for compact and well-separated clusters. Moreover, they are also severely affected by the presence of noise and outliers in the data.
+
+
+###  IMP POINTS
+#### Core Points:
+A data point is considered a core point if it has a minimum number of neighboring points (minPts) within a specified radius (ε or epsilon). Core points are the foundation of clusters.
+#### Border Points:
+Border points are not dense enough to be core points themselves, but they lie within the radius of a core point. They are often considered part of the cluster associated with the core point.
+#### Noise Points:
+Noise points, also known as outliers, do not belong to any cluster. They are isolated points that have too few neighbors within the specified radius.
+#### Algorithm Steps:
+
+##### Parameter Selection:
+Choose the parameters ε (radius) and minPts (minimum number of points to form a core point). These values significantly influence the outcome of the clustering.
+##### Point Categorization:
+For each data point, calculate the number of points within the ε radius. If this count is greater than or equal to minPts, mark the point as a core point. Otherwise, mark it as a noise point.
+##### Cluster Formation:
+For each core point, recursively find all points within its ε radius and mark them as part of the same cluster. This process may involve merging clusters if overlapping regions are encountered.
+##### Assign Border Points:
+Assign border points to the cluster of their corresponding core point.
+##### Noise Removal:
+Noise points remain unassigned to any cluster.
+##### Advantages:
+
+Doesn't require the number of clusters to be specified.
+Can identify clusters with varying shapes and densities.
+Robust to noise and outliers.
+Handles clusters of different sizes.
+
+
+ ### CODE
+
+      from sklearn.cluster import DBSCAN
+
+       # min_samples == minimum points ≥ dataset_dimensions + 1
+       dbs = DBSCAN(eps=0.24, min_samples=5)
+       dbs.fit(scaled_customer_data)
+       labels = dbs.labels_ { This stands for different cluster also for noise points labels is equal to -1}
+       total_labels = np.unique(labels)
+       n_labels = 0
+       for n in total_labels:
+         if n != -1:
+         n_labels += 1
+         print("Number of clusters:", n_labels)
+
+         sns.scatterplot(data=scaled_customer_data, 
+                x='Annual Income (k$)', y='Spending Score (1-100)', 
+                hue='labels', palette='muted').set_title('DBSCAN found clusters')
