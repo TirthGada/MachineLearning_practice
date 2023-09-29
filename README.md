@@ -1,3 +1,6 @@
+
+Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution of the target variable is similar to a normal distribution in terms of tailedness.
+
 # MachineLearning_practice
 
 **1)Diabetes dataset**:-Trained dataset using **linear regression** and plotted the trained and tested data points using **Numpy** , **Scikit** , **Matplotlib** .
