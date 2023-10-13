@@ -156,6 +156,10 @@ Always needs to determine the value of K which may be complex some time.
 
 The computation cost is high because of calculating the distance between the data points for all the training samples.
 
+<img width="1440" alt="Screenshot 2023-10-13 at 4 39 04 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/9045f189-b0dd-4fa3-9e88-63a300b84693">
+<img width="1440" alt="Screenshot 2023-10-13 at 4 38 55 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/06556a73-9371-4c66-b79a-eabe9d9d6bb1">
+
+
 ********
 # Multiple Linear Regression
 
