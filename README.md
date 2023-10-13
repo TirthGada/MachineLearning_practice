@@ -109,6 +109,9 @@ Land Use: We can identify the areas of similar land use by this algorithm.
 
 Marketing: Marketing trends can be identified using this algorithm.
 
+**Hyperparameter tuning**
+https://www.analyticsvidhya.com/blog/2020/03/beginners-guide-random-forest-hyperparameter-tuning/
+
 ******
 # K-Nearest Neighbor(KNN) Algorithm
 **1)INTRODUCTION:**
