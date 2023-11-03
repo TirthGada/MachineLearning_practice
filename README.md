@@ -2,13 +2,38 @@
 Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution of the target variable is similar to a normal distribution in terms of tailedness.
 
 # MachineLearning_practice
-
+*******
 *******
 # SUPERVISED LEARNING
 *******
 ### Residual 
 Residual is the distance between predicted point (on the regression line) & actual point as depicted
 ******
+
+# ANOVA 
+
+<img width="1440" alt="Screenshot 2023-11-03 at 11 59 57 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/d08d190b-bc9d-4aa1-ac3f-addd863dc169">
+<img width="1440" alt="Screenshot 2023-11-04 at 12 05 22 AM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/a59eafb9-fe82-420f-9285-0ece7a108e70">
+
+*******
+# StandardScaler
+StandardScaler is an important preprocessing step in many machine learning and data analysis workflows because it helps to scale and normalize the features of your dataset. Here are several reasons why StandardScaler is important:
+
+**Mean Centering**: StandardScaler transforms your data so that it has a mean (average) of zero. This is important because it helps in removing any bias from the data. When the mean is centered at zero, it ensures that the positive and negative deviations from the mean have an equal influence on the model, which can be especially important for algorithms that are sensitive to feature scales, such as gradient descent-based optimization methods.
+
+**Standard Deviation Scaling**: StandardScaler scales the data to have a standard deviation of 1. This ensures that the features have a similar scale, which can be important for algorithms that assume that the features are roughly normally distributed and have a similar scale.
+
+**Improved Convergence**: Many machine learning algorithms, such as support vector machines, k-means clustering, and principal component analysis, work better when the input features are on a similar scale. Scaling with StandardScaler can help these algorithms converge faster and produce more stable and reliable results.
+
+**Better Interpretability**: Scaling the features with StandardScaler can make it easier to interpret the importance of each feature in the context of the model. Without scaling, features with larger numeric values might be mistakenly considered more important, even if they are not.
+
+**Outlier Handling**: StandardScaler can also help in handling outliers. When features are standardized, extreme values are not exaggerated, and their impact on the model is reduced. This can make the model more robust to outliers in the dataset.
+
+**Compatibility with Distance-Based Algorithms**: Many clustering and classification algorithms rely on distance metrics, like Euclidean distance, to measure similarity between data points. StandardScaler ensures that the distance calculations are meaningful and not dominated by features with larger scales.
+
+**Regularization**: Some regularization techniques, like L1 and L2 regularization, assume that the features have similar scales. StandardScaler can help ensure that the regularization terms are applied uniformly across all features.
+
+*****
 # Support Vector Machine 
 **1)INTRODUCTION**
 
