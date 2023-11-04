@@ -411,6 +411,7 @@ In classification, there are many different evaluation metrics. The most popular
 Another common metric is **AUC, area under the receiver operating characteristic (ROC) curve. The Reciever operating characteristic curve plots the true positive (TP) rate versus the false positive (FP) rate at different classification thresholds**.**The thresholds are different probability cutoffs that separate the two classes in binary classification**. It uses probability to tell us how well a model separates the classes.
 
 ![1*zs8w3RBo1RJcloz74Rm-zQ](https://github.com/TirthGada/MachineLearning_practice/assets/118129263/1eac33e2-c09f-4dd0-9c26-a6ad6de53005)
+<img width="1440" alt="Screenshot 2023-11-04 at 12 15 28 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/a5ba6e6d-021e-408c-b1d1-1ca15274971a">
 
 ### Syntax
 
