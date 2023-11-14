@@ -9,6 +9,9 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 ### Residual 
 Residual is the distance between predicted point (on the regression line) & actual point as depicted
 ******
+# PCA
+
+https://www.geeksforgeeks.org/principal-component-analysis-pca/
 
 # ANOVA 
 
