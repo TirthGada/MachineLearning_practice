@@ -8,6 +8,40 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 *******
 ### Residual 
 Residual is the distance between predicted point (on the regression line) & actual point as depicted
+# RFECV
+
+RFECV (Recursive Feature Elimination with Cross-Validation) performs recursive feature elimination with cross-validation loop to extract the optimal features. Scikit-learn provides RFECV class to implement RFECV method to find the most important features in a given dataset.
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.feature_selection import RFECV
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+            
+            # Assuming df is your DataFrame and output is your target variable
+            # Replace these with your actual DataFrame and target variable
+            
+            # Split the data into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(df, output, test_size=0.2, random_state=42)
+            
+            # Apply StandardScaler to the training and testing sets
+            scaler = StandardScaler()
+            X_train_scaled = scaler.fit_transform(X_train)
+            X_test_scaled = scaler.transform(X_test)
+            
+            # Create a RandomForestClassifier
+            estimator = RandomForestClassifier()
+            
+            # Use RFE with cross-validation to find the optimal number of features
+            selector = RFECV(estimator, cv=2)
+            selector = selector.fit(X_train_scaled, y_train)
+            
+            # Print the optimal number of features
+            print("Optimal number of features: %d" % selector.n_features_)
+            
+            # Print the selected features
+            print("Selected features: %s" % selector.support_)
+
+
 ******
 # PCA
 **Maths** : https://towardsdatascience.com/the-mathematics-behind-principal-component-analysis-fff2d7f4b643
