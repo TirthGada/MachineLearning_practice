@@ -1,5 +1,40 @@
 **https://github.com/TirthGada/Grinstead-python-probability**
 
+*******
+# BIAS - VARIANCE TRADEOFF
+
+**https://medium.com/snu-ai/the-bias-variance-trade-off-a-mathematical-view-14ff9dfe5a3c**
+
+*****
+
+
+
+
+
+<img width="1440" alt="Screenshot 2024-02-04 at 6 15 00 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/e3b35daf-d5bf-43d7-9d8a-e40b4fabea89">
+
+Derivation of the Equation
+
+Let’s start by defining the various notations used. We have independent variables x that affect the value of a dependent variable y. Function f denotes the true relationship between x and y. In real life problems it is very hard to know this relationship. y is given by this formula along with some noise which is represented by the random variable ϵ with zero mean and variance σϵ²:
+
+Mathematically, ϵ has the following properties:
+
+Now, when we try to model the underlying real-life problem, we try to find a function f̂ that can accurately predict the true relationship f. The goal is to bring the prediction as close as possible to the actual value (y ≈ f̂(x)) to minimise the error.
+Now, coming to bias-variance trade-off equation;
+
+Here, 𝔼[(y −f̂(x))²] is the Mean Squared Error, commonly known as MSE. This is defined as the average squared difference of a prediction f̂(x) from its true value y.
+Bias is defined as the difference of the average value of prediction from the true relationship function f(x).
+
+Variance is defined as the expectation of the squared deviation of f̂(x) from its expected value 𝔼[f̂(x)].
+
+Starting from the LHS of the equation, 𝔼[(y −f̂(x))²];
+
+Replacing y by f(x)+ϵ in the first line, we proceed by expanding further using the linear property of expectation and independence of the random variables ϵ and f̂. Then using the properties of ϵ and the fact that hat when two random variables are independent, the expectation of their product is equal to the product of their expectations.
+Now, by further expanding the term on the RHS, 𝔼[(f(x) −f̂(x))²];
+
+𝔼[f̂(x)] − f(x) is a constant since we subtract f(x), a constant , from 𝔼[f̂(x)] which is also a constant. So, 𝔼[(𝔼[f̂(x)] − f(x))²] = (𝔼[f̂(x)] − f(x))². Further expanding using the linearity property of expectation we get the value of 𝔼[(f(x) −f̂(x))²]. Plugging this value back into the equation for 𝔼[(y −f̂(x))²], we arrive on our final equation;
+
+
 ********
 # Lambda Function
 
