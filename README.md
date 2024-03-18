@@ -8,8 +8,15 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 ## SST , SSR , SSE 
 
 **https://365datascience.com/tutorials/statistics-tutorials/sum-squares/**
+<img width="1440" alt="Screenshot 2024-03-18 at 10 23 20 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/e4aff40b-3749-48af-b24a-9e2af25dd982">
+
+
+<img width="1440" alt="Screenshot 2024-03-18 at 10 32 10 PM" src="https://github.com/TirthGada/MachineLearning_practice/assets/118129263/60091cba-2ef0-40ff-b778-dc607a1e79fa">
 
 ***
+
+
+
 
 
 *******
