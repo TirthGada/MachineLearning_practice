@@ -3,6 +3,15 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 
 # MachineLearning_practice
 *******
+
+
+## SST , SSR , SSE 
+
+**https://365datascience.com/tutorials/statistics-tutorials/sum-squares/**
+
+***
+
+
 *******
 # SUPERVISED LEARNING
 *******
