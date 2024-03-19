@@ -4,6 +4,29 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 # MachineLearning_practice
 *******
 
+## Gradient Descent Technique
+
+**Batch Gradient Descent**
+
+### Batch Gradient Descent converges directly to minima. SGD converges faster for larger datasets. 
+In Batch Gradient Descent, all the training data is taken into consideration to take a single step. We take the average of the gradients of all the training examples and then use that mean gradient to update our parameters. So that’s just one step of gradient descent in one epoch.
+
+**Stochastic Gradient Descent**
+
+In Batch Gradient Descent we were considering all the examples for every step of Gradient Descent. But what if our dataset is very huge. Deep learning models crave for data. The more the data the more chances of a model to be good. Suppose our dataset has 5 million examples, then just to take one step the model will have to calculate the gradients of all the 5 million examples. This does not seem an efficient way. To tackle this problem we have Stochastic Gradient Descent. In Stochastic Gradient Descent (SGD), we consider just one example at a time to take a single step.Also because the cost is so fluctuating, it will never reach the minima but it will keep dancing around it.
+SGD can be used for larger datasets. It converges faster when the dataset is large as it causes updates to the parameters more frequently.
+
+**Mini Batch Gradient Descent**
+
+We have seen the Batch Gradient Descent. We have also seen the Stochastic Gradient Descent. Batch Gradient Descent can be used for smoother curves. SGD can be used when the dataset is large. Batch Gradient Descent converges directly to minima. SGD converges faster for larger datasets. But, since in SGD we use only one example at a time, we cannot implement the vectorized implementation on it. This can slow down the computations. To tackle this problem, a mixture of Batch Gradient Descent and SGD is used.
+Neither we use all the dataset all at once nor we use the single example at a time. We use a batch of a fixed number of training examples which is less than the actual dataset and call it a mini-batch. Doing this helps us achieve the advantages of both the former variants we saw. So, after creating the mini-batches of fixed size, we do the following steps in one epoch:
+Pick a mini-batch
+Feed it to Neural Network
+Calculate the mean gradient of the mini-batch
+Use the mean gradient we calculated in step 3 to update the weights
+Repeat steps 1–4 for the mini-batches we created
+Just like SGD, the average cost over the epochs in mini-batch gradient descent fluctuates because we are averaging a small number of examples at a time.
+
 
 ## SST , SSR , SSE 
 
@@ -15,7 +38,14 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 
 ***
 
+# ADABOOST 
 
+**https://www.analyticsvidhya.com/blog/2021/09/adaboost-algorithm-a-complete-guide-for-beginners/**
+**https://www.youtube.com/watch?v=NLRO1-jp5F8**
+
+## Bagging ( Bootstrap aggregation )
+
+Bagging is Used in random forest algorithm . Where the entire sample is divided into different smaller subset , where each smaller subset is processed by the individual different model ( decision tree ) and the individual output from different models is combined to give a final prediction 
 
 
 
