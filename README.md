@@ -6,6 +6,7 @@ Kurtosis Close to 3: A kurtosis value close to 3 suggests that the distribution 
 
 ## Gradient Descent Technique
 
+
 **Batch Gradient Descent**
 
 ### Batch Gradient Descent converges directly to minima. SGD converges faster for larger datasets. 
@@ -40,8 +41,28 @@ Just like SGD, the average cost over the epochs in mini-batch gradient descent f
 
 # ADABOOST 
 
+AdaBoost uses Decision Tree Classifier as default Classifier. 
+
+base_estimator: It is a weak learner used to train the model. It uses DecisionTreeClassifier as default weak learner for training purpose. You can also specify different machine learning algorithms.
+
+n_estimators: Number of weak learners to train iteratively.
+
+                        # Create adaboost classifer object
+                        abc = AdaBoostClassifier(n_estimators=50,
+                                                 learning_rate=1)
+                        # Train Adaboost Classifer
+                        model = abc.fit(X_train, y_train)
+                        
+                        #Predict the response for test dataset
+                        y_pred = model.predict(X_test)
+
 **https://www.analyticsvidhya.com/blog/2021/09/adaboost-algorithm-a-complete-guide-for-beginners/**
 **https://www.youtube.com/watch?v=NLRO1-jp5F8**
+
+# Gradient Boost 
+
+**https://youtu.be/eEtEPdw2dck?feature=shared**
+**https://www.youtube.com/watch?v=Oo9q6YtGzvc&list=PLc-A_ClQmXKDlVbr9V3VhDZC5jJsPBN3Q&index=2**
 
 ## Bagging ( Bootstrap aggregation )
 
